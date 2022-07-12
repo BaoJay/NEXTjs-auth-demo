@@ -19,6 +19,7 @@ export default NextAuth({
         });
 
         if (!user) {
+          // If fail, NEXT will redirect to error page
           client.close();
           throw new Error("Couldn't find user!");
         }
